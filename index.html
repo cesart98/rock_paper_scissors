@@ -10,7 +10,7 @@
     <script>
 
 // Code for single round of rock paper scissors
-
+/*
         function computerPlay() {
             let randomNumber = Math.random();
 
@@ -56,7 +56,7 @@
         console.log("You chose " + playerSelection);
         console.log("Computer chose " + computerSelection);
         console.log(playRound(playerSelection, computerSelection));
-
+*/
 // Code for 5 round game of rock paper scissors
 
         function game() {
@@ -115,6 +115,19 @@
             }
 
         }
+
+        function scoreMessage() {
+            console.log("You have " + playerScore + " points, while Computer has " + computerScore + " points.")
+        }
+
+        let computerScore = 0
+        let playerScore = 0
+
+        console.log('Beginning round one...');
+        console.log('Beginning round two...');
+        console.log('Beginning round three...');
+        console.log('Beginning round four...');
+        console.log('Beginning round five...');
     </script>
 </body>
 </html>
