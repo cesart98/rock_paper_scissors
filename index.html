@@ -92,22 +92,28 @@
                 if (playerSelection === "rock" && computerSelection === "rock") {
                     return "It's a tie! Try again.";
                 } else if (playerSelection === "rock" && computerSelection === "paper") {
+                    computerScore = computerScore ++;
                     return "You lose! Paper beats rock.";
                 } else if (playerSelection === "rock" && computerSelection === "scissors") {
+                    playerScore = playerScore ++;
                     return "You win! Rock beats Scissors.";
                 }
 
                 if (playerSelection === "paper" && computerSelection === "rock") {
+                    playerScore = playerScore ++;
                     return "You win! Paper beats rock.";
                 } else if (playerSelection === "paper" && computerSelection === "paper") {
                     return "It's a tie! Try again.";
                 } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                    computerScore = computerScore ++;
                     return "You lose! Scissors beats paper.";
                 }
 
                 if (playerSelection === "scissors" && computerSelection === "rock") {
+                    computerScore = computerScore ++;
                     return "You lose! Rock beats scissors.";
                 } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                    playerScore = playerScore ++;
                     return "You win! Scissors beats paper.";
                 } else {
                     return "It's a tie! Try again.";
