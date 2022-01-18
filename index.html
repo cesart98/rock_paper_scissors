@@ -31,6 +31,14 @@
                 return "You win! Rock beats Scissors."
             }
 
+            if (playerSelection = "paper" && computerSelection = "rock") {
+                return "You win! Paper beats rock.";
+            } else if (playerSelection = "paper" && computerSelection = "paper") {
+                return "It's a tie! Try again.";
+            } else if (playerSelection = "paper" && computerSelection = "scissors"){
+                return "You lose! Scissors beats paper."
+            }
+
         }
 
         let computerSelection = computerPlay();
