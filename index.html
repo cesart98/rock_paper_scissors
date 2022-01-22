@@ -91,32 +91,37 @@
                 let result;
 
                 if (playerSelection === "rock" && computerSelection === "rock") {
-                    let result = "It's a tie! Try again.";
+                    result = "It's a tie! Try again.";
                 } else if (playerSelection === "rock" && computerSelection === "paper") {
-                    let result = "You lose! Paper beats rock.";
+                    result = "You lose! Paper beats rock.";
                 } else if (playerSelection === "rock" && computerSelection === "scissors") {
-                    let result = "You win! Rock beats Scissors.";
+                    result = "You win! Rock beats Scissors.";
                 }
 
                 if (playerSelection === "paper" && computerSelection === "rock") {
-                    let result = "You win! Paper beats rock.";
+                    result = "You win! Paper beats rock.";
                 } else if (playerSelection === "paper" && computerSelection === "paper") {
-                    let result = "It's a tie! Try again.";
+                    result = "It's a tie! Try again.";
                 } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                    let result = "You lose! Scissors beats paper.";
+                    result = "You lose! Scissors beats paper.";
                 }
 
                 if (playerSelection === "scissors" && computerSelection === "rock") {
-                    let result = "You lose! Rock beats scissors.";
+                    result = "You lose! Rock beats scissors.";
                 } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                    let result = "You win! Scissors beats paper.";
+                    result = "You win! Scissors beats paper.";
                 } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-                    let result = "It's a tie! Try again.";
+                    result = "It's a tie! Try again.";
                 }
 
                 return result;
+
             }
+
+            return playRound("rock", "scissors");
         }
+
+        console.log(game());
     </script>
 </body>
 </html>
