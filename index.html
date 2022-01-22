@@ -145,6 +145,16 @@
             console.log("Your score: " + playerScore + " | Computer score: " + computerScore);
         }
 
+        function announceFinal () {
+            if (playerScore > computerScore) {
+                console.log("Congratulations! You won this game! Refresh to try again.")
+            } else if (playerScore < computerScore) {
+                console.log("Sorry! You lost this game. Refresh to try again.")
+            } else if (playerScore = computerScore) {
+                console.log("It's a tie! Refresh to try again.")
+            }
+        }
+
         resetScore();
         announceScore();
         console.log("Beginning round 1...")
@@ -166,6 +176,8 @@
         console.log("Beginning round 5...")
         console.log(game());
         announceScore();
+
+        announceFinal();
     </script>
 </body>
 </html>
