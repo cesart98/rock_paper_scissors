@@ -91,33 +91,33 @@
                 let result;
 
                 if (playerSelection === "rock" && computerSelection === "rock") {
-                    result = "It's a tie! Try again.";
+                    result = "It's a tie this round! Try again.";
                 } else if (playerSelection === "rock" && computerSelection === "paper") {
-                    result = "You lose! Paper beats rock.";
+                    result = "You lose this round! Paper beats rock.";
                     computerScore = ++computerScore;
                 } else if (playerSelection === "rock" && computerSelection === "scissors") {
-                    result = "You win! Rock beats Scissors.";
+                    result = "You win this round! Rock beats Scissors.";
                     playerScore = ++playerScore;
                 }
 
                 if (playerSelection === "paper" && computerSelection === "rock") {
-                    result = "You win! Paper beats rock.";
+                    result = "You win this round! Paper beats rock.";
                     playerScore = ++playerScore;
                 } else if (playerSelection === "paper" && computerSelection === "paper") {
-                    result = "It's a tie! Try again.";
+                    result = "It's a tie this round! Try again.";
                 } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                    result = "You lose! Scissors beats paper.";
+                    result = "You lose this round! Scissors beats paper.";
                     computerScore = ++computerScore;
                 }
 
                 if (playerSelection === "scissors" && computerSelection === "rock") {
-                    result = "You lose! Rock beats scissors.";
+                    result = "You lose this round! Rock beats scissors.";
                     computerScore = ++computerScore;
                 } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                    result = "You win! Scissors beats paper.";
+                    result = "You win this round! Scissors beats paper.";
                     playerScore = ++playerScore;
                 } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-                    result = "It's a tie! Try again.";
+                    result = "It's a tie this round! Try again.";
                 }
 
                 return result;
