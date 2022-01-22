@@ -132,11 +132,15 @@
         function resetScore () {
             playerScore = 0;
             computerScore = 0;
+            console.log("Scores reset.")
+        }
+
+        function announceScore () {
+            console.log("Your score: " + playerScore + " | Computer score: " + computerScore);
         }
 
         resetScore();
-        console.log(playerScore);
-        console.log(computerScore);
+        announceScore();
         console.log("Beginning round 1...")
         console.log(game());
 
