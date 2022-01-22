@@ -57,6 +57,7 @@
         console.log("Computer chose " + computerSelection);
         console.log(playRound(playerSelection, computerSelection));
 */
+
 // Code for 5 round game of rock paper scissors
 
         function game() {
@@ -64,14 +65,12 @@
             function playerPlay() {
                 let playerInput = prompt("Rock, paper, or scissors?")
 
-                if (playerInput.toLowerCase() = "rock") {
+                if (playerInput.toLowerCase() === "rock") {
                     return "rock";
-                } else if (playerInput.toLowerCase() = "paper") {
+                } else if (playerInput.toLowerCase() === "paper") {
                     return "paper";
-                } else if (playerInput.toLowerCase() = "scissors") {
+                } else if (playerInput.toLowerCase() === "scissors") {
                     return "scissors";
-                } else {
-                    alert("Error")
                 }
             }
 
@@ -89,51 +88,39 @@
 
             function playRound(playerSelection, computerSelection) {
 
+                let result;
+
                 if (playerSelection === "rock" && computerSelection === "rock") {
-                    return "It's a tie! Try again.";
+                    let result = "It's a tie! Try again.";
                 } else if (playerSelection === "rock" && computerSelection === "paper") {
-                    computerScore = computerScore ++;
-                    return "You lose! Paper beats rock.";
+                    ++ computerScore;
+                    let result = "You lose! Paper beats rock.";
                 } else if (playerSelection === "rock" && computerSelection === "scissors") {
-                    playerScore = playerScore ++;
-                    return "You win! Rock beats Scissors.";
+                    ++ playerScore;
+                    let result = "You win! Rock beats Scissors.";
                 }
 
                 if (playerSelection === "paper" && computerSelection === "rock") {
-                    playerScore = playerScore ++;
-                    return "You win! Paper beats rock.";
+                    ++ playerScore;
+                    let result = "You win! Paper beats rock.";
                 } else if (playerSelection === "paper" && computerSelection === "paper") {
-                    return "It's a tie! Try again.";
+                    let result = "It's a tie! Try again.";
                 } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                    computerScore = computerScore ++;
-                    return "You lose! Scissors beats paper.";
+                    ++ computerScore;
+                    let result = "You lose! Scissors beats paper.";
                 }
 
                 if (playerSelection === "scissors" && computerSelection === "rock") {
-                    computerScore = computerScore ++;
-                    return "You lose! Rock beats scissors.";
+                    ++ computerScore;
+                    let result = "You lose! Rock beats scissors.";
                 } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                    playerScore = playerScore ++;
-                    return "You win! Scissors beats paper.";
-                } else {
-                    return "It's a tie! Try again.";
+                    ++ playerScore;
+                    let result = "You win! Scissors beats paper.";
+                } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+                    let result = "It's a tie! Try again.";
                 }
             }
-
         }
-
-        function scoreMessage() {
-            console.log("You have " + playerScore + " points, while Computer has " + computerScore + " points.")
-        }
-
-        let computerScore = 0
-        let playerScore = 0
-
-        console.log('Beginning round one...');
-        console.log('Beginning round two...');
-        console.log('Beginning round three...');
-        console.log('Beginning round four...');
-        console.log('Beginning round five...');
     </script>
 </body>
 </html>
