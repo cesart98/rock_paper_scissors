@@ -93,32 +93,28 @@
                 if (playerSelection === "rock" && computerSelection === "rock") {
                     let result = "It's a tie! Try again.";
                 } else if (playerSelection === "rock" && computerSelection === "paper") {
-                    ++ computerScore;
                     let result = "You lose! Paper beats rock.";
                 } else if (playerSelection === "rock" && computerSelection === "scissors") {
-                    ++ playerScore;
                     let result = "You win! Rock beats Scissors.";
                 }
 
                 if (playerSelection === "paper" && computerSelection === "rock") {
-                    ++ playerScore;
                     let result = "You win! Paper beats rock.";
                 } else if (playerSelection === "paper" && computerSelection === "paper") {
                     let result = "It's a tie! Try again.";
                 } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                    ++ computerScore;
                     let result = "You lose! Scissors beats paper.";
                 }
 
                 if (playerSelection === "scissors" && computerSelection === "rock") {
-                    ++ computerScore;
                     let result = "You lose! Rock beats scissors.";
                 } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                    ++ playerScore;
                     let result = "You win! Scissors beats paper.";
                 } else if (playerSelection === "scissors" && computerSelection === "scissors") {
                     let result = "It's a tie! Try again.";
                 }
+
+                return result;
             }
         }
     </script>
