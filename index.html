@@ -118,7 +118,10 @@
 
             }
 
-            return playRound("rock", "scissors");
+            let playerSelection = playerPlay();
+
+
+            return playRound(playerSelection, "scissors");
         }
 
         console.log(game());
