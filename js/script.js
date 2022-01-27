@@ -1,4 +1,4 @@
-function computerPlay() {
+function computerSelection() {
   let randomNumber = Math.random();
 
   if (randomNumber < 0.33) {
@@ -37,9 +37,15 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-let playerSelection = "rock";
-let computerSelection = computerPlay();
 
-console.log("You chose " + playerSelection);
-console.log("Computer chose " + computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+function playerSelection() {
+    const buttonRock = document.querySelector(".rock");
+    const buttonPaper = document.querySelector(".paper");
+    const buttonScissors = document.querySelector(".scissors");
+
+    buttonRock.addEventListener("click", () => "rock")
+    buttonPaper.addEventListener("click", () => "paper")
+    buttonScissors.addEventListener("click", () => "scissors")
+}
+
+console.log(playRound());
