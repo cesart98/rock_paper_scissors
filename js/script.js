@@ -35,13 +35,17 @@ function computerSelection() {
     }
 }
 
+function announceChoices (playerChoice, computerChoice) {
+    let announcement = "You chose " + playerChoice + " | Computer chose " + computerChoice;
+    return announcement;
+}
+
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         let playerChoice = button.classList.toString();
         let computerChoice = computerSelection();
-        console.log(playerChoice);
-        console.log(computerChoice);
+        console.log(announceChoices(playerChoice, computerChoice));
         console.log(getWinner(playerChoice, computerChoice));
     })
 })
