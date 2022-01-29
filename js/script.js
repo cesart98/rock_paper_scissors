@@ -40,12 +40,15 @@ function announceChoices (playerChoice, computerChoice) {
     return announcement;
 }
 
+function assignPlayerChoice(event) {
+    let playerChoice = event.target.className;
+    let computerChoice = computerSelection();
+    console.log(announceChoices(playerChoice, computerChoice));
+    console.log(getWinner(playerChoice, computerChoice));   
+}
+
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        let playerChoice = button.classList.toString();
-        let computerChoice = computerSelection();
-        console.log(announceChoices(playerChoice, computerChoice));
-        console.log(getWinner(playerChoice, computerChoice));
-    })
+    button.addEventListener("click", assignPlayerChoice);
 })
+
