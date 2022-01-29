@@ -43,8 +43,7 @@ function announceChoices (playerChoice, computerChoice) {
 function runGame(event) {
     let playerChoice = event.target.className;
     let computerChoice = computerSelection();
-    resultsBox.textContent = announceChoices(playerChoice, computerChoice);
-    console.log(getWinner(playerChoice, computerChoice));   
+    resultsBox.textContent = `${announceChoices(playerChoice, computerChoice)}\n ${getWinner(playerChoice, computerChoice)}`;
 }
 
 const buttons = document.querySelectorAll("button");
